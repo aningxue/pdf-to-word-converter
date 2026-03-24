@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free PDF to Word Converter Online | No Registration | No Watermark</title>
+    <meta name="description" content="Free online PDF to Word converter. No installation, no account, 100% free. Convert PDF to editable Word in seconds.">
+    <meta name="keywords" content="PDF to Word, free PDF converter, online PDF to Word, no registration PDF tool">
+    <meta property="og:title" content="Free PDF to Word Converter Online | No Registration | No Watermark">
+    <meta property="og:description" content="Free online PDF to Word converter. No installation, no account, 100% free. Convert PDF to editable Word in seconds.">
+    <meta property="og:type" content="website">
+    <!-- Tailwind CSS（Cloudflare 兼容） -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 🔥 关键：用 Cloudflare 加速的国内/全球兼容 CDN，避免加载失败 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/index.umd.min.js"></script>
+
+    <script>
+        // 配置pdfjs worker（用cdnjs，Cloudflare 全球节点覆盖）
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.js';
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+<nav class="bg-white shadow-sm py-4 px-6">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">PDF to Word Converter</h1>
+        <p class="text-gray-600 hidden sm:block">100% Free | No Registration</p>
+        <div class="mt-3 sm:mt-0 flex gap-4">
+            <a href="./" class="text-blue-600 font-medium hover:underline">Home</a>
+            <a href="./help/how-to.html" class="text-gray-700 font-medium hover:text-blue-600">How to Use</a>
+            <a href="./faq.html" class="text-gray-700 font-medium hover:text-blue-600">FAQ</a>
+            <a href="./about.html" class="text-gray-700 font-medium hover:text-blue-600">About</a>
+            <a href="./privacy.html" class="text-gray-700 font-medium hover:text-blue-600">Privacy</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container mx-auto py-10 px-6">
+    <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Free PDF to Word Converter</h2>
+        <p class="text-center text-gray-600 mb-8">Convert your PDF files to editable Word documents for free. No watermarks, no registration, no limits.</p>
+
+        <div id="upload-area" class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors mb-6">
+            <input type="file" id="file-input" accept=".pdf" class="hidden">
+            <button id="upload-btn" class="bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors mb-4">
+                Select PDF File
+            </button>
+            <p class="text-gray-500">Or drag and drop your PDF here</p>
+            <p class="text-sm text-gray-400 mt-2">Maximum file size: 10MB</p>
+        </div>
+
+        <div id="progress-area" class="hidden mb-6">
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <p id="progress-text" class="text-center text-gray-600 mt-2">Converting... 0%</p>
+        </div>
+
+        <div id="download-area" class="hidden mb-6">
+            <a id="download-btn" class="bg-green-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-green-700 transition-colors inline-block">
+                Download Word File
+            </a>
+            <button id="reset-btn" class="bg-gray-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-700 transition-colors ml-4">
+                Convert Another File
+            </button>
+            <p class="text-sm text-gray-500 mt-2">If Word prompts "Unreadable content", click "Yes" to repair and open</p>
+        </div>
+
+        <div id="error-area" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+            <p id="error-text">Error message</p>
+        </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto mt-10 bg-white rounded-lg shadow-md p-8">
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">How to Convert PDF to Word</h3>
+        <ol class="list-decimal list-inside space-y-2 text-gray-600">
+            <li>Click "Select PDF File" or drag and drop your PDF into the upload area.</li>
+            <li>Wait for the conversion to complete (usually a few seconds).</li>
+            <li>Download your editable Word document with no watermarks.</li>
+        </ol>
+
+        <h3 class="text-2xl font-bold mt-6 mb-4 text-gray-800">Why Choose Our PDF to Word Converter?</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-600">
+            <li>100% free, no hidden costs or subscriptions.</li>
+            <li>No registration or account required.</li>
+            <li>No watermarks on converted files.</li>
+            <li>Fast conversion speed (seconds per file).</li>
+            <li>Works on all devices (PC, Mac, mobile).</li>
+            <li>Secure: Files are deleted from our servers after 1 hour.</li>
+        </ul>
+    </div>
+</main>
+
+<div class="flex flex-wrap justify-center gap-4 mb-4">
+    <a href="./" class="text-gray-300 hover:text-white">Home</a>
+    <a href="./help/how-to.html" class="mx-2 hover:underline">How To Use</a>
+    <a href="./faq.html" class="text-gray-300 hover:text-white">FAQ</a>
+    <a href="./about.html" class="text-gray-300 hover:text-white">About</a>
+    <a href="./privacy.html" class="text-gray-300 hover:text-white">Privacy Policy</a>
+</div>
+
+<footer class="bg-gray-800 text-white py-8 px-6 mt-10">
+    <div class="container mx-auto text-center">
+        <p>© 2026 PDF to Word Converter | All Rights Reserved</p>
+        <p class="text-sm text-gray-400 mt-2">Free online tool for personal use only. We do not store your files permanently.</p>
+        <p class="text-sm text-gray-400 mt-1">Privacy Policy | Terms of Service</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
