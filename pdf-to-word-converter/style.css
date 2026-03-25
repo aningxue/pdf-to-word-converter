@@ -19,6 +19,14 @@
     min-height: 90px;
 }
 
+/* 新增：模式提示样式 */
+#mode-tip {
+    background-color: #fff7e6;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ffc107;
+}
+
 @media (max-width: 640px) {
     h1 {
         font-size: 1.8rem !important;
