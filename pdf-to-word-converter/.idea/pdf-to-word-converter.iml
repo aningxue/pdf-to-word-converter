@@ -8,5 +8,6 @@
     <orderEntry type="library" name="pdfjs-dist" level="application" />
     <orderEntry type="library" name="pdf" level="application" />
     <orderEntry type="library" name="docx" level="application" />
+    <orderEntry type="library" name="5f874f452c2c2389aa6c396804c585b7" level="application" />
   </component>
 </module>
