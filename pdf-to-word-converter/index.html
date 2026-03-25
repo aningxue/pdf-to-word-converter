@@ -13,12 +13,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- 🔥 关键：用 Cloudflare 加速的国内/全球兼容 CDN，避免加载失败 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/index.umd.min.js"></script>
+    <!-- 稳定可溯源 CDN → 国内/国外都能秒加载 -->
+    <script src="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.min.js"></script>
 
     <script>
-        // 配置pdfjs worker（用cdnjs，Cloudflare 全球节点覆盖）
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.js';
+        // ✅ 版本完全匹配，路径正确
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js';
     </script>
 
     <link rel="stylesheet" href="style.css">
