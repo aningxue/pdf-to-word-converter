@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pdf-to-word-converter-bo5.pages.dev/sitemap.xml
